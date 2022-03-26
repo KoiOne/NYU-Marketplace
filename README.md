@@ -1,7 +1,7 @@
 Original App Design Project - README
 ===
 
-# APP_Undecided
+# NYU Marketplace
 
 ## Table of Contents
 1. [Overview](#Overview)
