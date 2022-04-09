@@ -28,39 +28,40 @@ NYU Marketplace allows users to trade their used goods within the NYU community.
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User logs in to access all features
+* User click on post to check full description and connect with the seller
+* Each user has a profile
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Use Map feature to explore locations and corresponding products (tba)
+* User can chat with another user
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+* Register - User signs up or logs into their account
+* All posts - all of the posted items with a picture and short description
+   * Single post - full description and picture of the item, message tab to connect with user
+* Profile
+   * Allows user to upload a photo and fill in information that is interesting to them and others
+* Message - chat with other users
+* Map
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Login
+* Register
+* All posts
+* Profile
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login -> Register if doesn't have an account
+* All post -> Single post -> Message
+* Profile -> Single Post
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
