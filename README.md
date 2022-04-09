@@ -64,10 +64,11 @@ NYU Marketplace allows users to trade their used goods within the NYU community.
 * Profile -> Single Post
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://user-images.githubusercontent.com/74123693/162585622-1d0f3982-db4e-4b04-b775-36233f3b8c03.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+[Marketplace Wireframe.pdf](https://github.com/hhh21u/group-project/files/8457502/Marketplace.Wireframe.pdf)
+
 
 ### [BONUS] Interactive Prototype
 
