@@ -11,16 +11,16 @@ Original App Design Project - README
 
 ## Overview
 ### Description
-[Description of your app]
+NYU Marketplace allows users to trade their used goods within the NYU community. They can connect with buyers or sellers within a click. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Selling Product
+- **Mobile:** This app would be primarily developed for mobile.
+- **Story:** Allow users to post products and choose the products they are interested in trading. Connect buyers and sellers within a click.
+- **Market:** Any individual from NYU community, not limited to students.
+- **Habit:** This app could be used as often or unoften as the user wanted, and what exactly they’re looking for.
+- **Scope:** First we would ask users to register an account. Once they are signed in, they can choose to connect with other users to buy/sell.
 
 ## Product Spec
 
