@@ -1,0 +1,53 @@
+PODS:
+  - Alamofire (5.5.0)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - Bolts/Tasks (1.9.1)
+<<<<<<< HEAD
+  - CameraManager (5.1.3)
+  - MBProgressHUD (1.2.0)
+=======
+>>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
+  - Parse (1.19.3):
+    - Parse/Core (= 1.19.3)
+  - Parse/Core (1.19.3):
+    - Bolts/Tasks (= 1.9.1)
+
+DEPENDENCIES:
+  - AlamofireImage
+<<<<<<< HEAD
+  - CameraManager (~> 5.1)
+  - MBProgressHUD
+=======
+>>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
+  - Parse
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Bolts
+<<<<<<< HEAD
+    - CameraManager
+    - MBProgressHUD
+=======
+>>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
+    - Parse
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+<<<<<<< HEAD
+  CameraManager: 73936a52093081ba5e44914e8120ab511360f5d4
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+
+PODFILE CHECKSUM: ebd0d390a133f5cc8cd2167217e704016afd10a8
+=======
+  Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+
+PODFILE CHECKSUM: 2f8430c936331e663b5c04b2d837bddb2c2910b4
+>>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
+
+COCOAPODS: 1.11.3

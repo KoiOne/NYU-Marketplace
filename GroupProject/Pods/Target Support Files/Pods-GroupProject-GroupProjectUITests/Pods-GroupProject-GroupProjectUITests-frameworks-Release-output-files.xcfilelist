@@ -1,0 +1,9 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework
+<<<<<<< HEAD
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CameraManager.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework
+=======
+>>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework
