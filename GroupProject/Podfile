@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-<<<<<<< HEAD
+
 
 target 'GroupProject' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -12,15 +12,7 @@ target 'GroupProject' do
 	pod 'CameraManager', '~> 5.1'
 
   # Pods for GroupProject
-=======
-target 'GroupProject' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
 
-  # Pods for GroupProject
-	pod 'Parse'
-	pod 'AlamofireImage'
->>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
 
   target 'GroupProjectTests' do
     inherit! :search_paths
