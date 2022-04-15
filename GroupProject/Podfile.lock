@@ -3,7 +3,6 @@ PODS:
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
   - Bolts/Tasks (1.9.1)
-
   - CameraManager (5.1.3)
   - MBProgressHUD (1.2.0)
   - Parse (1.19.3):
@@ -34,6 +33,6 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-PODFILE CHECKSUM: ebd0d390a133f5cc8cd2167217e704016afd10a8
+PODFILE CHECKSUM: 0aefadb6164f0ef9305905bd0eda54af73aee568
 
 COCOAPODS: 1.11.3

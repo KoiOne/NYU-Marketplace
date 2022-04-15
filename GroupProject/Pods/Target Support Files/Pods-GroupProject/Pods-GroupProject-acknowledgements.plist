@@ -111,7 +111,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-<<<<<<< HEAD
 			<string>MIT License
 
 Copyright (c) 2020 Imaginary Cloud
@@ -171,8 +170,6 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-=======
->>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
 			<string>BSD License
 
 For Parse iOS/OSX SDK software
