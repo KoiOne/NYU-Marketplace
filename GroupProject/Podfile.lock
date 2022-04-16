@@ -3,6 +3,8 @@ PODS:
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
   - Bolts/Tasks (1.9.1)
+<<<<<<< HEAD
+
   - CameraManager (5.1.3)
   - MBProgressHUD (1.2.0)
   - Parse (1.19.3):
