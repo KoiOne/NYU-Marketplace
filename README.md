@@ -80,3 +80,15 @@ NYU Marketplace allows users to trade their used goods within the NYU community.
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Video Walkthrough
+
+
+
+- login page and register page
+
+<img src='http://g.recordit.co/0egxvCye52.gif' title='Video Walkthrough 1/2' width='' alt='Video Walkthrough 1/2' />
+
+- Home page and post new item
+
+<img src='https://recordit.co/ENFBkGkhd8.gif' title='Video Walkthrough 1/2' width='' alt='Video Walkthrough 1/2' />

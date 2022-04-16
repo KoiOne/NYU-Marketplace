@@ -2,9 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-GroupProject-GroupProjectUITests/Pods-Gro
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
 ${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework
-<<<<<<< HEAD
 ${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
 ${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
-=======
->>>>>>> 1eaf0bc5b1657bf1a12d56509ea418bb5e1f2e43
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
