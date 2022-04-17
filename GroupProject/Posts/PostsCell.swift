@@ -13,5 +13,5 @@ class PostsCell: UICollectionViewCell {
     
     @IBOutlet weak var priceLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
 }

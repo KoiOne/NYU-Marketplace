@@ -15,6 +15,7 @@
 		C00190E52808DBE5003CCB98 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00190E42808DBE5003CCB98 /* PostsViewController.swift */; };
 		C00190E72808E8BE003CCB98 /* newPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00190E62808E8BE003CCB98 /* newPostViewController.swift */; };
 		C00190E92809B989003CCB98 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00190E82809B989003CCB98 /* chatViewController.swift */; };
+		C00190EB280B40E9003CCB98 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00190EA280B40E9003CCB98 /* ItemDetailViewController.swift */; };
 		C01991EA27F8B5FA00F79156 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01991E927F8B5FA00F79156 /* TableViewCell.swift */; };
 		DA27994A2801FC1600C4701F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2799492801FC1600C4701F /* LoginViewController.swift */; };
 		DA27994E28021CF300C4701F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27994D28021CF300C4701F /* RegisterViewController.swift */; };
@@ -59,6 +60,7 @@
 		C00190E42808DBE5003CCB98 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		C00190E62808E8BE003CCB98 /* newPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostViewController.swift; sourceTree = "<group>"; };
 		C00190E82809B989003CCB98 /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
+		C00190EA280B40E9003CCB98 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		C01991E927F8B5FA00F79156 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		DA2799492801FC1600C4701F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA27994D28021CF300C4701F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				C00190E02808B1B5003CCB98 /* PostsCell.swift */,
 				C00190E42808DBE5003CCB98 /* PostsViewController.swift */,
 				C00190E62808E8BE003CCB98 /* newPostViewController.swift */,
+				C00190EA280B40E9003CCB98 /* ItemDetailViewController.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			files = (
 				DA317B8927E58C2B001B0C0E /* ViewController.swift in Sources */,
 				C01991EA27F8B5FA00F79156 /* TableViewCell.swift in Sources */,
+				C00190EB280B40E9003CCB98 /* ItemDetailViewController.swift in Sources */,
 				C00190E12808B1B5003CCB98 /* PostsCell.swift in Sources */,
 				C00190E92809B989003CCB98 /* chatViewController.swift in Sources */,
 				C00190E52808DBE5003CCB98 /* PostsViewController.swift in Sources */,
@@ -626,6 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RLN8SNALS5;
 				INFOPLIST_FILE = GroupProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,6 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RLN8SNALS5;
 				INFOPLIST_FILE = GroupProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

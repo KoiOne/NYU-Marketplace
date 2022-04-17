@@ -21,6 +21,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // Set Layout of collectionView
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 0
@@ -28,12 +29,28 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         layout.itemSize = CGSize(width: width, height: width * 3 / 2)
         
         refreshControl.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
-        collectionView.refreshControl = refreshControl
+        
+        collectionView.insertSubview(refreshControl, at: 0)
 
         // Do any additional setup after loading the view.
     }
     
     let refreshControl = UIRefreshControl()
+    
+    
+    func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+        // Implement the delay method
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
+    }
+    
+    
+    func refresh() {
+        // refresh after 2 second delay
+        run(after: 2) {
+           self.refreshControl.endRefreshing()
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -47,12 +64,27 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             if posts != nil{
                 self.posts = posts!
                 self.collectionView.reloadData()
-                self.refreshControl.endRefreshing()
+                self.refresh()
             }
         }
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination
+        // Pass the selected object to the new controller
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)
+        let item = posts[indexPath!.row]
         
+        let deailViewController = segue.destination as! ItemDetailViewController
+        deailViewController.post = item
+
+
+    }
+    
+    
+    
     func collectionView(_ tableView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
     }
@@ -62,7 +94,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostsCell", for: indexPath) as! PostsCell
         
         cell.priceLabel.text = post["price"] as? String
-        cell.descriptionLabel.text = (post["name"] as! String)
+        cell.nameLabel.text = (post["name"] as! String)
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!

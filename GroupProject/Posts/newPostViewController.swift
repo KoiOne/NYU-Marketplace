@@ -45,6 +45,7 @@ class newPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         item.saveInBackground {(success, error) in
             if success{
                 print("saved")
+                self.dismiss(animated: true, completion: nil)
             } else{
                 print("error\(error?.localizedDescription)")
             }
