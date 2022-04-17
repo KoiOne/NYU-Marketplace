@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let placeholderU = NSAttributedString(string: "Phone number, username, email", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        let placeholderU = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         usernameField.attributedPlaceholder = placeholderU;
         self.view.addSubview(usernameField)
         let placeholderP = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])

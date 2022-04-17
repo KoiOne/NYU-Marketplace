@@ -11,6 +11,7 @@ import Parse
 import MBProgressHUD
 import CameraManager
 import Parse
+import DropDown
 
 extension UITextField {
     func setLeftView(icon: UIImage, btnView: UIButton) {
@@ -99,6 +100,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+
+    
+    @IBOutlet weak var vwDropDown:UIView!
     @IBOutlet weak var school: UITextField!
     {
         didSet{
@@ -112,6 +116,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+    let dropDown = DropDown()
+    let schoolArray = ["CAS","Stern", "Courant", "Gallatin", "Tisch", "Steinhardt", "Tandon", "Silver", "SPS", "NYU Abu Dhabi", "NYU Shanghai"]
+    let yearDropDown = DropDown()
+    let yearArray = ["Freshman", "Sophomore", "Junior", "Senior", "First-year graduate student","Second-year graduate student", "PhD candidate"]
+    
+    
+    
+    @IBOutlet weak var yearVwDropDown: UIView!
     @IBOutlet weak var schoolyear: UITextField!
     {
         didSet{
@@ -148,20 +160,51 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         self.view.addSubview(nyuemail)
         
         school.isSecureTextEntry = false
-        let placeholderS = NSAttributedString(string: "school (e.g. CAS, Stern, ...)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
-        school.attributedPlaceholder = placeholderS;
-        self.view.addSubview(school)
+        //let placeholderS = NSAttributedString(string: "school (e.g. CAS, Stern, ...)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        //school.attributedPlaceholder = placeholderS;
+        //self.view.addSubview(school)
+        
+        
+        school.text = "Select a school"
+        school.textColor = UIColor.gray
+        dropDown.anchorView = vwDropDown
+        dropDown.dataSource = schoolArray
+        dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.topOffset = CGPoint(x: 0, y: -(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.direction = .bottom
+        dropDown.selectionAction = { [unowned self]
+            (index: Int, item: String) in print("Selected item: \(item) at index: \(index)")
+            self.school.textColor = UIColor.black
+            self.school.text = schoolArray[index]
+        }
+        
         
         schoolyear.isSecureTextEntry = false
-        let placeholderY = NSAttributedString(string: "school year (Class of 2022, 2023, ...)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
-        schoolyear.attributedPlaceholder = placeholderY;
-        self.view.addSubview(schoolyear)
+        schoolyear.text = "Select a school year"
+        schoolyear.textColor = UIColor.gray
+        yearDropDown.anchorView = yearVwDropDown
+        yearDropDown.dataSource = yearArray
+        yearDropDown.bottomOffset = CGPoint(x: 0, y: (yearDropDown.anchorView?.plainView.bounds.height)!)
+        yearDropDown.topOffset = CGPoint(x: 0, y: -(yearDropDown.anchorView?.plainView.bounds.height)!)
+        yearDropDown.direction = .bottom
+        yearDropDown.selectionAction = { [unowned self]
+            (index: Int, item: String) in print("Selected item: \(item) at index: \(index)")
+            self.schoolyear.textColor = UIColor.black
+            self.schoolyear.text = yearArray[index]
+        }
         
         
         self.view.addSubview(password)
         
     }
     
+    @IBAction func showSchoolOptions(_ sender: Any) {
+        dropDown.show()
+    }
+    
+    @IBAction func showYearOptions(_ sender: Any) {
+        yearDropDown.show()
+    }
     
     
     @IBAction func onImage(_ sender: Any) {
@@ -206,6 +249,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             }
         }
     }
+
     
     
     /*
