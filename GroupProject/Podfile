@@ -13,6 +13,8 @@ target 'GroupProject' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
+	pod 'MessageKit'
+	pod 'RealmSwift'
 
   # Pods for GroupProject
 

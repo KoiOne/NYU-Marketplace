@@ -17,6 +17,11 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.performSegue(withIdentifier: "NewPostSegue", sender: nil)
     }
     
+    
+    @IBAction func searchPost(_ sender: Any) {
+        self.performSegue(withIdentifier: "searchSegue", sender: nil)
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var posts = [PFObject]()
@@ -93,6 +98,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
         
 
+    
 
     }
     

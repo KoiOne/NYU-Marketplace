@@ -242,6 +242,34 @@
             </objects>
             <point key="canvasLocation" x="1177" y="830"/>
         </scene>
+        <!--Search Page View Controller-->
+        <scene sceneID="9z9-Uv-UJ1">
+            <objects>
+                <viewController id="RQ3-Tb-5Be" customClass="searchPageViewController" customModule="GroupProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l45-Gh-5zd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dgl-jb-wAr">
+                                <rect key="frame" x="0.0" y="11" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aci-hL-eH7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="y1k-h5-sse"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Dgl-jb-wAr" id="oGg-5e-zC6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8D-68-Uly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1688.4057971014495" y="3401.7857142857142"/>
+        </scene>
         <!--All Posts-->
         <scene sceneID="LWt-km-pWE">
             <objects>
@@ -326,6 +354,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="All Posts" id="dNJ-jw-Rlf">
+                        <barButtonItem key="leftBarButtonItem" image="magnifyingglass" catalog="system" id="cc1-vM-6SD">
+                            <connections>
+                                <action selector="searchPost:" destination="3s7-5C-dbA" id="Bsx-Ba-4IB"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" id="hJl-ww-K8c">
                             <connections>
                                 <action selector="addNewPost:" destination="3s7-5C-dbA" id="XTp-QT-uJ6"/>
@@ -335,27 +368,60 @@
                     <connections>
                         <outlet property="collectionView" destination="xhj-MR-K4h" id="sxW-E6-aKk"/>
                         <segue destination="uAM-gF-EBx" kind="presentation" identifier="NewPostSegue" id="4Dw-DV-fab"/>
+                        <segue destination="RQ3-Tb-5Be" kind="presentation" identifier="searchSegue" id="kZQ-NZ-1Qu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdv-aR-ngw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-413" y="2607"/>
+            <point key="canvasLocation" x="-413" y="2650"/>
         </scene>
         <!--Chat-->
-        <scene sceneID="kx7-jt-9zb">
+        <scene sceneID="Ngl-XV-9t4">
             <objects>
-                <viewController id="GU3-O6-Gxi" customClass="ChatViewController" customModule="GroupProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cAC-zd-SUY">
+                <viewController id="aaf-Cn-86Q" customClass="ConversationViewController" customModule="GroupProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iFA-9j-9QJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Z4W-yZ-C9y"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Jm-Hu-uyH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConversationCell" rowHeight="76" id="uaP-V5-lVS" customClass="ConversationCell" customModule="GroupProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uaP-V5-lVS" id="eeu-p9-JA4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conversation 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whx-gr-f9k">
+                                                    <rect key="frame" x="41" y="27" width="112" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4dt-rR-Kay" kind="show" id="amG-LV-VN8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a6c-e3-Mze"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="Yg8-5a-F4H"/>
+                    <navigationItem key="navigationItem" title="Chat" id="JeK-57-Sqf"/>
+                    <connections>
+                        <outlet property="tableView" destination="9Jm-Hu-uyH" id="f7N-rj-O5E"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxf-YQ-7h1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CfM-ht-DeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="2607"/>
+            <point key="canvasLocation" x="1177" y="2651"/>
         </scene>
         <!--Profile-->
         <scene sceneID="vTD-q1-ipA">
@@ -725,6 +791,22 @@
             </objects>
             <point key="canvasLocation" x="-61" y="3402"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="ItF-ZR-bZ0">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="4dt-rR-Kay" customClass="ChatViewController" customModule="GroupProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sef-v4-WMp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JcF-Pd-iJr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DK8-KO-IEA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rol-Ut-dRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="3374"/>
+        </scene>
         <!--titile-->
         <scene sceneID="Ude-3n-DvD">
             <objects>
@@ -757,7 +839,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GU3-O6-Gxi" kind="relationship" relationship="rootViewController" id="WBD-nF-PUS"/>
+                        <segue destination="aaf-Cn-86Q" kind="relationship" relationship="rootViewController" id="4Rq-b7-bwS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThN-Fa-9UX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -791,6 +873,7 @@
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
