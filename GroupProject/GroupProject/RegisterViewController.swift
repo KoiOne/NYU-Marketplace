@@ -58,6 +58,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     let btn3 = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
     let btn4 = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
     let btn5 = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+    let user = PFUser()
 
     let targetSize = CGSize(width: 25, height: 25)
     @IBOutlet weak var profileImage: UIImageView!
@@ -234,12 +235,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     
     @IBAction func onSignUp(_ sender: Any) {
-        let user = PFUser()
         user.username = username.text
         user.password = password.text
         user.email = nyuemail.text
         user["school"] = school.text
         user["schoolyear"] = schoolyear.text
+        let imageData = profileImage.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData! )
+        user["profileImage"] = file
         
         user.signUpInBackground{ (success, error) in
             if success{
@@ -261,5 +264,17 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         // Pass the selected object to the new view controller.
     }
     */
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination
+//        // Pass the selected object to the new controller
+////        let cell = sender as! UICollectionViewCell
+////        let indexPath = collectionView.indexPath(for: cell)
+//        let userI = user
+//
+//        let profileViewController = segue.destination as! ProfileViewController
+//        profileViewController.user = userI
+//
+//    }
 
 }

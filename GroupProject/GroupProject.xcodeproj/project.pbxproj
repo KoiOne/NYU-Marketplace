@@ -27,6 +27,8 @@
 		DA317B9127E58C2D001B0C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA317B8F27E58C2D001B0C0E /* LaunchScreen.storyboard */; };
 		DA317B9C27E58C2D001B0C0E /* GroupProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA317B9B27E58C2D001B0C0E /* GroupProjectTests.swift */; };
 		DA317BA727E58C2E001B0C0E /* GroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA317BA627E58C2E001B0C0E /* GroupProjectUITests.swift */; };
+		DA8649ED2814666C00DF55E9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8649EC2814666C00DF55E9 /* ProfileViewController.swift */; };
+		DA8649EF2817332200DF55E9 /* PreviousPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8649EE2817332200DF55E9 /* PreviousPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		DA317BA227E58C2E001B0C0E /* GroupProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA317BA627E58C2E001B0C0E /* GroupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProjectUITests.swift; sourceTree = "<group>"; };
 		DA317BA827E58C2E001B0C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8649EC2814666C00DF55E9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DA8649EE2817332200DF55E9 /* PreviousPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousPostCell.swift; sourceTree = "<group>"; };
 		DD860FB1AE1DA0565A9A2CFF /* Pods-GroupProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProject.debug.xcconfig"; path = "Target Support Files/Pods-GroupProject/Pods-GroupProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,8 @@
 				DA317B8627E58C2B001B0C0E /* SceneDelegate.swift */,
 				DA317B8827E58C2B001B0C0E /* ViewController.swift */,
 				DA317B8A27E58C2B001B0C0E /* Main.storyboard */,
+				DA8649EE2817332200DF55E9 /* PreviousPostCell.swift */,
+				DA8649EC2814666C00DF55E9 /* ProfileViewController.swift */,
 				DA27994D28021CF300C4701F /* RegisterViewController.swift */,
 				DA2799492801FC1600C4701F /* LoginViewController.swift */,
 				C01991E927F8B5FA00F79156 /* TableViewCell.swift */,
@@ -443,6 +449,7 @@
 			files = (
 				DA317B8927E58C2B001B0C0E /* ViewController.swift in Sources */,
 				C01991EA27F8B5FA00F79156 /* TableViewCell.swift in Sources */,
+				DA8649EF2817332200DF55E9 /* PreviousPostCell.swift in Sources */,
 				C00190EB280B40E9003CCB98 /* ItemDetailViewController.swift in Sources */,
 				C00190E12808B1B5003CCB98 /* PostsCell.swift in Sources */,
 				C00190E92809B989003CCB98 /* chatViewController.swift in Sources */,
@@ -451,6 +458,7 @@
 				C00190E72808E8BE003CCB98 /* newPostViewController.swift in Sources */,
 				C00190E32808B3A0003CCB98 /* HomeViewController.swift in Sources */,
 				DA27994E28021CF300C4701F /* RegisterViewController.swift in Sources */,
+				DA8649ED2814666C00DF55E9 /* ProfileViewController.swift in Sources */,
 				DA27994A2801FC1600C4701F /* LoginViewController.swift in Sources */,
 				DA317B8727E58C2B001B0C0E /* SceneDelegate.swift in Sources */,
 			);

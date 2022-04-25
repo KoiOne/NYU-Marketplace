@@ -13,6 +13,7 @@ extension UITextField {
 
 class LoginViewController: UIViewController {
  
+    var usernew = PFUser()
     let eyeButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -67,6 +68,7 @@ class LoginViewController: UIViewController {
         
         PFUser.logInWithUsername(inBackground: username, password: password){ (user, error) in
             if user != nil{
+                self.usernew = user!
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }else{
                 print("Error: \(error?.localizedDescription)")
@@ -100,5 +102,20 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination
+//        // Pass the selected object to the new controller
+////        let cell = sender as! UICollectionViewCell
+////        let indexPath = collectionView.indexPath(for: cell)
+//        if segue.identifier == "loginProfile" {
+//                if let nextViewController = segue.destination as? ProfileViewController {
+//                    let userI = usernew
+//                    
+//                    let profileViewController = segue.destination as! ProfileViewController
+//                    profileViewController.user = userI
+//
+//                }
+//            }
+//    }
 
 }
