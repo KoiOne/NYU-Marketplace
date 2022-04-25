@@ -10,6 +10,11 @@ target 'GroupProject' do
 	pod 'MBProgressHUD'
 	pod 'CameraManager', '~> 5.1'
 	pod 'DropDown'
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'MessageKit'
+	pod 'RealmSwift'
 
   # Pods for GroupProject
 
