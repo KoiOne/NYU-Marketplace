@@ -22,6 +22,8 @@
 		C0E3B5D728160E73001682DE /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D628160E73001682DE /* ConversationCell.swift */; };
 		C0E3B5D928165280001682DE /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D828165280001682DE /* SearchPageViewController.swift */; };
 		C0E3B5DC2817B498001682DE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5DB2817B498001682DE /* SearchCell.swift */; };
+		C0E3B5E028189519001682DE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5DF28189519001682DE /* RegisterViewController.swift */; };
+		C0E3B5E228189588001682DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5E128189588001682DE /* LoginViewController.swift */; };
 		DA27994A2801FC1600C4701F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2799492801FC1600C4701F /* LoginViewController.swift */; };
 		DA27994E28021CF300C4701F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27994D28021CF300C4701F /* RegisterViewController.swift */; };
 		DA317B8527E58C2B001B0C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA317B8427E58C2B001B0C0E /* AppDelegate.swift */; };
@@ -71,6 +73,8 @@
 		C0E3B5D628160E73001682DE /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		C0E3B5D828165280001682DE /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		C0E3B5DB2817B498001682DE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		C0E3B5DF28189519001682DE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C0E3B5E128189588001682DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA2799492801FC1600C4701F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA27994D28021CF300C4701F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DA317B8127E58C2B001B0C0E /* GroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +177,8 @@
 			children = (
 				DA27994D28021CF300C4701F /* RegisterViewController.swift */,
 				DA2799492801FC1600C4701F /* LoginViewController.swift */,
+				C0E3B5DF28189519001682DE /* RegisterViewController.swift */,
+				C0E3B5E128189588001682DE /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -518,7 +524,9 @@
 				C00190E52808DBE5003CCB98 /* PostsViewController.swift in Sources */,
 				DA317B8527E58C2B001B0C0E /* AppDelegate.swift in Sources */,
 				C00190E72808E8BE003CCB98 /* newPostViewController.swift in Sources */,
+				C0E3B5E028189519001682DE /* RegisterViewController.swift in Sources */,
 				DA27994E28021CF300C4701F /* RegisterViewController.swift in Sources */,
+				C0E3B5E228189588001682DE /* LoginViewController.swift in Sources */,
 				C0E3B5D928165280001682DE /* SearchPageViewController.swift in Sources */,
 				DA27994A2801FC1600C4701F /* LoginViewController.swift in Sources */,
 				DA317B8727E58C2B001B0C0E /* SceneDelegate.swift in Sources */,
