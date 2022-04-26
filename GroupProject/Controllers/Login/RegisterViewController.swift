@@ -262,7 +262,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         user.signUpInBackground{ (success, error) in
             if success{
-@ -248,6 +261,19 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
+                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+            }else{
                 print("Error: \(error?.localizedDescription)")
             }
         }
@@ -282,3 +283,15 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
