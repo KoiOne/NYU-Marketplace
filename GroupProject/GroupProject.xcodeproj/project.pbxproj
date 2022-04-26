@@ -20,7 +20,8 @@
 		C0E3B5D12814BDB1001682DE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D02814BDB1001682DE /* DatabaseManager.swift */; };
 		C0E3B5D528160B6D001682DE /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D428160B6D001682DE /* ConversationViewController.swift */; };
 		C0E3B5D728160E73001682DE /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D628160E73001682DE /* ConversationCell.swift */; };
-		C0E3B5D928165280001682DE /* searchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D828165280001682DE /* searchPageViewController.swift */; };
+		C0E3B5D928165280001682DE /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5D828165280001682DE /* SearchPageViewController.swift */; };
+		C0E3B5DC2817B498001682DE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3B5DB2817B498001682DE /* SearchCell.swift */; };
 		DA27994A2801FC1600C4701F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2799492801FC1600C4701F /* LoginViewController.swift */; };
 		DA27994E28021CF300C4701F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27994D28021CF300C4701F /* RegisterViewController.swift */; };
 		DA317B8527E58C2B001B0C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA317B8427E58C2B001B0C0E /* AppDelegate.swift */; };
@@ -68,7 +69,8 @@
 		C0E3B5D02814BDB1001682DE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C0E3B5D428160B6D001682DE /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		C0E3B5D628160E73001682DE /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
-		C0E3B5D828165280001682DE /* searchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchPageViewController.swift; sourceTree = "<group>"; };
+		C0E3B5D828165280001682DE /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
+		C0E3B5DB2817B498001682DE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		DA2799492801FC1600C4701F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA27994D28021CF300C4701F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DA317B8127E58C2B001B0C0E /* GroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +134,8 @@
 				C00190E42808DBE5003CCB98 /* PostsViewController.swift */,
 				C00190E62808E8BE003CCB98 /* newPostViewController.swift */,
 				C00190EA280B40E9003CCB98 /* ItemDetailViewController.swift */,
-				C0E3B5D828165280001682DE /* searchPageViewController.swift */,
+				C0E3B5D828165280001682DE /* SearchPageViewController.swift */,
+				C0E3B5DB2817B498001682DE /* SearchCell.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00190EB280B40E9003CCB98 /* ItemDetailViewController.swift in Sources */,
+				C0E3B5DC2817B498001682DE /* SearchCell.swift in Sources */,
 				C0E3B5D12814BDB1001682DE /* DatabaseManager.swift in Sources */,
 				C0E3B5D528160B6D001682DE /* ConversationViewController.swift in Sources */,
 				C00190E12808B1B5003CCB98 /* PostsCell.swift in Sources */,
@@ -515,7 +519,7 @@
 				DA317B8527E58C2B001B0C0E /* AppDelegate.swift in Sources */,
 				C00190E72808E8BE003CCB98 /* newPostViewController.swift in Sources */,
 				DA27994E28021CF300C4701F /* RegisterViewController.swift in Sources */,
-				C0E3B5D928165280001682DE /* searchPageViewController.swift in Sources */,
+				C0E3B5D928165280001682DE /* SearchPageViewController.swift in Sources */,
 				DA27994A2801FC1600C4701F /* LoginViewController.swift in Sources */,
 				DA317B8727E58C2B001B0C0E /* SceneDelegate.swift in Sources */,
 			);

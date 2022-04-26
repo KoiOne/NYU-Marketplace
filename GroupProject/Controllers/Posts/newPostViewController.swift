@@ -33,6 +33,7 @@ class newPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         let item = PFObject(className: "Items")
         
         item["name"] = nameText.text!
+        item["nameSearch"] = nameText.text!.lowercased()
         item["owner"] = PFUser.current()!
         item["price"] = priceText.text!
         item["location"] = locationText.text!
@@ -84,7 +85,7 @@ class newPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
@@ -99,4 +100,16 @@ class newPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     */
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
