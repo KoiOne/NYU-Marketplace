@@ -12,6 +12,8 @@ class PreviousPostCell: UITableViewCell {
     @IBOutlet weak var itemView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

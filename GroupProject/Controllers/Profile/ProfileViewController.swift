@@ -16,46 +16,9 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
-    }
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
-        //let comments = (post["comments"] as? [PFObject]) ?? []
-        print(tableView)
-        print(post)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousPostCell", for: indexPath) as! PreviousPostCell
-        
-        let price = post["price"] as! String
-        cell.priceLabel.text = "Price:" + price
-        
-        cell.descriptionLabel.text = post["description"] as? String
-        
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        cell.itemView.af.setImage(withURL: url)
-        
-        return cell
-    }
-    @objc func onRefresh() {
-        run(after: 2) {
-               self.refreshControl.endRefreshing()
-            }
-    }
-    // Implement the delay method
-        func run(after wait: TimeInterval, closure: @escaping () -> Void) {
-            let queue = DispatchQueue.main
-            queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
-        }
 
     
 
@@ -77,6 +40,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         //portraitView.image = UIImage.init(named: "image_placeholder")
 
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 600
+        
         let imageFile = user?.object(forKey: "profileImage") as? PFFileObject
         let urlString = imageFile?.url! ?? "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fplaceholder-image&psig=AOvVaw3pCogNxkeyJT4TEgu-QMkM&ust=1650828967471000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCPi1nKX3qvcCFQAAAAAdAAAAABAU"
         let url = URL(string: urlString)!
@@ -109,8 +75,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
         // Do any additional setup after loading the view.
-        self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = 600
+    
         
     }
 
@@ -142,8 +107,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                         let postOwner = post["owner"] as! PFUser
                         let postOwnerId = postOwner.objectId
                         if userid == postOwnerId{
-                            print("within same id")
-                            print(post)
+                            //print("within same id")
+                            //print(post)
                             self.posts.append(post)
                             self.tableView.reloadData()
                             self.refreshControl.endRefreshing()
@@ -155,12 +120,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination
         // Pass the selected object to the new controller
         if sender != nil{
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)
+            print(indexPath)
+            print(indexPath!.row)
+            print(posts)
             let item = posts[indexPath!.row]
 
             let deailViewController = segue.destination as! ItemDetailViewController
@@ -168,6 +137,86 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    
+    
+    //upload profile image
+    @IBAction func onImage(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        }else{
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        
+        let size = CGSize(width: 150, height: 150)
+        let scaledImage = image.af_imageScaled(to: size)
+        
+        self.portraitView.image = scaledImage
+        self.portraitView.sizeToFit()
+        self.portraitView.layer.cornerRadius = portraitView.frame.size.width/2
+        self.portraitView.clipsToBounds = true
+        
+        let imageData = self.portraitView.image?.pngData()
+        let file = PFFileObject(name: "imageafter.png", data: imageData! )
+        user?["profileImage"] = file
+        user?.saveInBackground ()
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    //Table View Control
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
+        //let comments = (post["comments"] as? [PFObject]) ?? []
+        //print(tableView)
+        //print(post)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousPostCell", for: indexPath) as! PreviousPostCell
+        
+        let price = post["price"] as! String
+        cell.priceLabel.text = "Price: " + price
+        let name = post["name"] as! String
+        cell.nameLabel.text = "Item Name: " + name
+        let des = post["description"] as! String
+        cell.descriptionLabel.text = "Description: " + des
+        
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        cell.itemView.af.setImage(withURL: url)
+        
+        return cell
+    }
+    @objc func onRefresh() {
+        run(after: 2) {
+               self.refreshControl.endRefreshing()
+            }
+    }
+    // Implement the delay method
+        func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+            let queue = DispatchQueue.main
+            queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
+        }
     
     
     
