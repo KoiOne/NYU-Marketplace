@@ -1,6 +1,0 @@
-framework module Pods_GroupProject_GroupProjectUITests {
-  umbrella header "Pods-GroupProject-GroupProjectUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

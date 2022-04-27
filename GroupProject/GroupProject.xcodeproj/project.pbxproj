@@ -31,6 +31,7 @@
 		DA317B9127E58C2D001B0C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA317B8F27E58C2D001B0C0E /* LaunchScreen.storyboard */; };
 		DA317B9C27E58C2D001B0C0E /* GroupProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA317B9B27E58C2D001B0C0E /* GroupProjectTests.swift */; };
 		DA317BA727E58C2E001B0C0E /* GroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA317BA627E58C2E001B0C0E /* GroupProjectUITests.swift */; };
+		DA8649F128189D6700DF55E9 /* PreviousPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8649F028189D6700DF55E9 /* PreviousPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DA317BA227E58C2E001B0C0E /* GroupProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA317BA627E58C2E001B0C0E /* GroupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProjectUITests.swift; sourceTree = "<group>"; };
 		DA317BA827E58C2E001B0C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8649F028189D6700DF55E9 /* PreviousPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousPostCell.swift; sourceTree = "<group>"; };
 		DD860FB1AE1DA0565A9A2CFF /* Pods-GroupProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProject.debug.xcconfig"; path = "Target Support Files/Pods-GroupProject/Pods-GroupProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E3B5CE28146BF2001682DE /* ProfileViewController.swift */,
+				DA8649F028189D6700DF55E9 /* PreviousPostCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				C0E3B5DC2817B498001682DE /* SearchCell.swift in Sources */,
 				C0E3B5D12814BDB1001682DE /* DatabaseManager.swift in Sources */,
 				C0E3B5D528160B6D001682DE /* ConversationViewController.swift in Sources */,
+				DA8649F128189D6700DF55E9 /* PreviousPostCell.swift in Sources */,
 				C00190E12808B1B5003CCB98 /* PostsCell.swift in Sources */,
 				C0E3B5CF28146BF2001682DE /* ProfileViewController.swift in Sources */,
 				C00190E92809B989003CCB98 /* ChatViewController.swift in Sources */,
