@@ -22,6 +22,9 @@ class ConversationViewController: UIViewController,UITableViewDelegate,UITableVi
 
         // Do any additional setup after loading the view.
     }
+    private func createNewConversation() {
+        
+    }
     
     private let noConversationLabel: UILabel = {
         let label = UILabel()

@@ -72,7 +72,8 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
         let query = PFQuery(className: "Items")
         query.order(byDescending: "createdAt")
-        query.includeKeys(["name","price","owner","location","description"])
+        query.includeKeys(["name","price","owner","location","description","email"])
+        query.includeKey("owner.email")
         query.limit = 20
         query.findObjectsInBackground{
             (posts, error) in

@@ -256,7 +256,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         user["schoolyear"] = schoolyear.text
         user.username = self.username.text
         user.password = self.password.text
-        user.email = self.nyuemail.text
+        user["email"] = self.nyuemail.text
         user["school"] = self.school.text
         user["schoolyear"] = self.schoolyear.text
         

@@ -31,6 +31,7 @@ class newPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func onSubmitButton(_ sender: Any) {
         let item = PFObject(className: "Items")
+        let user = PFUser.current()
         
         item["name"] = nameText.text!
         item["nameSearch"] = nameText.text!.lowercased()
@@ -38,6 +39,7 @@ class newPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         item["price"] = priceText.text!
         item["location"] = locationText.text!
         item["description"] = descriptionText.text!
+        item["ownerEmail"] = user?.email
         
         let imageData = posterView.image!.pngData()
         let file = PFFileObject(name: "image.png", data: imageData! )

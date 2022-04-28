@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nXr-5d-ITK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nXr-5d-ITK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8D-68-Uly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-886.95652173913049" y="3401.7857142857142"/>
+            <point key="canvasLocation" x="-2152" y="3402"/>
         </scene>
         <!--All Posts-->
         <scene sceneID="LWt-km-pWE">
@@ -629,7 +629,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2128.985507246377" y="2606.9196428571427"/>
+            <point key="canvasLocation" x="2129" y="2650"/>
         </scene>
         <!--Item-->
         <scene sceneID="6Xg-56-6yI">
@@ -648,6 +648,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Message"/>
+                                <connections>
+                                    <action selector="startChat:" destination="EWw-Kt-yH2" eventType="touchUpInside" id="XUc-hm-Fn4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description: Calc 2 Eighth Edition" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-tx-x7r">
                                 <rect key="frame" x="20" y="554" width="289" height="28"/>
@@ -723,11 +726,12 @@
                         <outlet property="nameLabel" destination="aog-tx-x7r" id="8uy-3R-kt8"/>
                         <outlet property="posterView" destination="cwy-Oi-7T1" id="Pma-e6-VK9"/>
                         <outlet property="priceLabel" destination="q3r-15-FnZ" id="ZVp-pp-arh"/>
+                        <segue destination="4dt-rR-Kay" kind="show" identifier="toChatSegue" id="ejb-TH-tp1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORa-Yn-MMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1923" y="3402"/>
+            <point key="canvasLocation" x="-413" y="4297"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="cfT-Gx-A3M">
@@ -958,7 +962,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-61" y="3402"/>
+            <point key="canvasLocation" x="-413" y="3452"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="ItF-ZR-bZ0">
@@ -974,7 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rol-Ut-dRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="3374"/>
+            <point key="canvasLocation" x="1177" y="3897"/>
         </scene>
         <!--titile-->
         <scene sceneID="Ude-3n-DvD">
@@ -1034,8 +1038,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ejb-TH-tp1"/>
         <segue reference="6aV-58-zgf"/>
-        <segue reference="vUm-9o-hlL"/>
+        <segue reference="IAP-ZT-VJR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="NYU Marketplace logo" width="542" height="134"/>
