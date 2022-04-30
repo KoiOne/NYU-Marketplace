@@ -469,17 +469,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conversation 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whx-gr-f9k">
-                                                    <rect key="frame" x="41" y="27" width="112" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whx-gr-f9k">
+                                                    <rect key="frame" x="20" y="11" width="156" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Whx-gr-f9k" secondAttribute="height" multiplier="52:7" id="g4X-Ip-XAV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tB-Yp-39t">
+                                                    <rect key="frame" x="20" y="34" width="374" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2tB-Yp-39t" secondAttribute="height" multiplier="374:31" id="frj-4d-Oqd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2tB-Yp-39t" firstAttribute="leading" secondItem="eeu-p9-JA4" secondAttribute="leadingMargin" id="05B-kz-FrR"/>
+                                                <constraint firstItem="Whx-gr-f9k" firstAttribute="leading" secondItem="eeu-p9-JA4" secondAttribute="leadingMargin" id="9tQ-Mv-eKB"/>
+                                                <constraint firstItem="2tB-Yp-39t" firstAttribute="trailing" secondItem="eeu-p9-JA4" secondAttribute="trailingMargin" id="MMU-H3-d5O"/>
+                                                <constraint firstItem="Whx-gr-f9k" firstAttribute="top" secondItem="eeu-p9-JA4" secondAttribute="topMargin" id="Re7-Oz-WhN"/>
+                                                <constraint firstItem="2tB-Yp-39t" firstAttribute="top" secondItem="Whx-gr-f9k" secondAttribute="bottom" constant="2" id="eRK-BH-YG6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Whx-gr-f9k" secondAttribute="trailing" constant="218" id="fSe-wQ-rG6"/>
+                                                <constraint firstItem="2tB-Yp-39t" firstAttribute="top" secondItem="Whx-gr-f9k" secondAttribute="bottom" constant="2" id="h4z-p4-fgk"/>
+                                                <constraint firstItem="2tB-Yp-39t" firstAttribute="bottom" secondItem="eeu-p9-JA4" secondAttribute="bottomMargin" id="xyH-Vt-CPm"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="4dt-rR-Kay" kind="show" id="amG-LV-VN8"/>
+                                            <outlet property="messageLabel" destination="2tB-Yp-39t" id="tnC-yi-JJg"/>
+                                            <outlet property="nameLabel" destination="Whx-gr-f9k" id="Erd-TR-hmy"/>
+                                            <segue destination="4dt-rR-Kay" kind="show" identifier="converToChatSegue" id="amG-LV-VN8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -495,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfM-ht-DeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="2651"/>
+            <point key="canvasLocation" x="1176.8115942028987" y="2650.4464285714284"/>
         </scene>
         <!--Profile-->
         <scene sceneID="vTD-q1-ipA">
@@ -1038,9 +1061,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ejb-TH-tp1"/>
+        <segue reference="amG-LV-VN8"/>
         <segue reference="6aV-58-zgf"/>
-        <segue reference="IAP-ZT-VJR"/>
+        <segue reference="vUm-9o-hlL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="NYU Marketplace logo" width="542" height="134"/>

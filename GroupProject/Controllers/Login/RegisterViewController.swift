@@ -263,19 +263,19 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         user.signUpInBackground{ (success, error) in
             if success{
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+                // FireBase SignUp
+                FirebaseAuth.Auth.auth().createUser(withEmail: self.nyuemail.text!, password: self.password.text!, completion: { [self]success, error in
+                    guard success != nil, error == nil else{
+                        self.alertUserLoginError(message: "Looks like a user account for that email address is already exists")
+                        return
+                    }
+                    DatabaseManager.shared.insertUser(with: ChatAppUser(username: username.text!, emailAddress: nyuemail.text!))
+                })
             }else{
                 print("Error: \(error?.localizedDescription)")
             }
         }
         
-        // FireBase SignUp
-        FirebaseAuth.Auth.auth().createUser(withEmail: nyuemail.text!, password: self.password.text!, completion: { [self]success, error in
-            guard success != nil, error == nil else{
-                self.alertUserLoginError(message: "Looks like a user account for that email address is already exists")
-                return
-            }
-            DatabaseManager.shared.insertUser(with: ChatAppUser(username: username.text!, emailAddress: nyuemail.text!))
-        })
         
         
         

@@ -8,7 +8,11 @@
 import UIKit
 
 class ConversationCell: UITableViewCell {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
