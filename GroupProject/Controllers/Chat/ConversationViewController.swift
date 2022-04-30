@@ -34,30 +34,21 @@ class ConversationViewController: UIViewController,UITableViewDelegate,UITableVi
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        view.addSubview(noConversationLabel)
-        fetchConversation()
         startListeningForConversation()
 
         // Do any additional setup after loading the view.
     }
-    private func createNewConversation() {
-        
-    }
     
-    private let noConversationLabel: UILabel = {
-        let label = UILabel()
-        label.text = "No Conversations!"
-        label.textColor = .gray
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 21, weight: .medium)
-        label.isHidden = true
-        return label
-    }()
+//    private let noConversationLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "No Conversations!"
+//        label.textColor = .gray
+//        label.textAlignment = .center
+//        label.font = .systemFont(ofSize: 21, weight: .medium)
+//        label.isHidden = true
+//        return label
+//    }()
     
-    private func fetchConversation() {
-        
-    }
     
     private func startListeningForConversation() {
         print("starting conversation")

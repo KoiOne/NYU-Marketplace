@@ -49,7 +49,7 @@ class ItemDetailViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toChatSegue"){
             let chatView = segue.destination as! ChatViewController
-            chatView.isNewChat = true
+            //chatView.isNewChat = true
             chatView.otherUserEmail = emailAddress!
             chatView.otherUserName = otherUser!
         }

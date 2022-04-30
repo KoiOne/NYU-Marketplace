@@ -45,8 +45,8 @@ NYU Marketplace allows users to trade their used goods within the NYU community.
    * Single post - full description and picture of the item, message tab to connect with user
 * Profile
    * Allows user to upload a photo and fill in information that is interesting to them and others
-* Message - chat with other users
-* Map
+* Conversation - chat with other users
+   * real time chat, update latest message real time on conversation view
 
 ### 3. Navigation
 
@@ -92,3 +92,15 @@ NYU Marketplace allows users to trade their used goods within the NYU community.
 - Home page and post new item
 
 <img src='https://recordit.co/ENFBkGkhd8.gif' title='Video Walkthrough 1/2' width='' alt='Video Walkthrough 1/2' />
+
+- Search for item
+
+<img src='https://recordit.co/VwXsNNK4WI.gif' title='Video Walkthrough 1/2' width='' alt='Video Walkthrough 1/2' />
+
+- Real time Conversation
+
+<img src='https://recordit.co/p8uvJcGC42.gif' title='Video Walkthrough 1/2' width='' alt='Video Walkthrough 1/2' />
+
+- Profile and sign out/ User can stay logged in
+
+<img src='https://recordit.co/18OnBzAY6A.gif' title='Video Walkthrough 1/2' width='' alt='Video Walkthrough 1/2' />
